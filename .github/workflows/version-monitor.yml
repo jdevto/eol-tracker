@@ -3,7 +3,7 @@ name: Monitor Software Versions
 on:
   push:
   schedule:
-    - cron: "0 0 * * 1"
+    - cron: "0 * * * *"  # Runs at the start of every hour
   workflow_dispatch:
 
 permissions:
@@ -131,8 +131,8 @@ jobs:
               if (!fs.existsSync(filePath)) return;
 
               const jsonData = JSON.parse(fs.readFileSync(filePath, "utf8"));
+              const latestVersion = jsonData[jsonData.length - 1]?.latest || "Unknown";
               const latestVersion = jsonData[0]?.latest || "Unknown";
-              
               const issueTitle = `Version Update Detected: ${product} (Version ${latestVersion})`;
               const issueBody = `A new version update was detected for **${product}** (Version: **${latestVersion}**).\n\nCheck the latest data here:\n\`\`\`json\n${fs.readFileSync(filePath, "utf8")}\n\`\`\``;
 
