@@ -1,0 +1,20 @@
+[
+  {
+    "cycle": "X.Y",
+    "releaseDate": "YYYY-MM-DD",
+    "eol": "YYYY-MM-DD",
+    "latest": "X.Y.Z",
+    "latestReleaseDate": "YYYY-MM-DD",
+    "link": "https://example.com/release-notes",
+    "lts": false
+  },
+  {
+    "cycle": "X.Y",
+    "releaseDate": "YYYY-MM-DD",
+    "eol": "YYYY-MM-DD",
+    "latest": "X.Y.Z",
+    "latestReleaseDate": "YYYY-MM-DD",
+    "link": "https://example.com/release-notes",
+    "lts": false
+  }
+]
